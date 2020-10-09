@@ -1,12 +1,14 @@
 import App from "./components/App";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 export default class Index extends Component {
     render() {
         return (
-            <div>
+            <Provider store={store}>
                 <App />
-            </div>
+            </Provider>
         );
     }
 }
